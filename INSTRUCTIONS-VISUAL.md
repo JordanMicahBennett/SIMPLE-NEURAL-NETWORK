@@ -8,7 +8,6 @@ Aim : Artificial neuronal instruction par vision detection.
 
 
 
-
 ????
 =======
 Synthetic sentience initializes via 'visual [digit] detection cycle'. 
@@ -47,7 +46,7 @@ ii.Clear unwanted illustration via 'clear' toggle.
 
 iii.Toggle 'detect'.
 
-IV.See "RECALLING", "QUANTIZING" & "INSTRUCTING"
+iv.See "RECALLING", "QUANTIZING" & "INSTRUCTING"
 
 NOTE: Instruction cycle converges on variations of unpacked image data ([source-code/data/config/](https://github.com/JordanMicahBennett/SYNTHETIC-SENTIENCE/tree/master/source-code/data/config)(small|medium|large|very large).ini), such that network instruction is occur-able in partitions. [See [source-code/data/config/readme-config-details.md](https://github.com/JordanMicahBennett/SYNTHETIC-SENTIENCE/blob/master/source-code/data/config/readme-config-details.md)]
 
