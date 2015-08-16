@@ -1,0 +1,11 @@
+uni-code 2014 december 23 3:29 am
+
+updated UNICODE_MenuPanel to perform drawMore function
+updated UNICODE_MenuPanel, adding GRAPHICS_COMPONENT & GRAPHICS2D_COMPONENT to allow for usage of aforesaid 
+updated UNICODE_MenuPanel, adding CIRCULAR_BUTTON_PROXIMITY, CIRCULAR_AXIS_PROXIMITY
+functions via generic instance of abstract
+updated UNICODE_Structure_CheckboxList, created PLATFORM instance
+updated UNICODE_Structure_Checkbox, removed 'abstract' keyword
+updated UNICODE_Structure_CheckboxList, to include dynamic timed scroll effect
+updated UNICODE_Structure_ComplexTable to dynamically allocate columns based on header cardinality
+updated UNICODE_ExcelReader to return proper data array/string

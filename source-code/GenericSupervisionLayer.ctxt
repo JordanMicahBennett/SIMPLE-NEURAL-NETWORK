@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=fileName\ consoleDisplayQuery
+comment0.target=GenericSupervisionLayer(java.lang.String,\ boolean)
+comment1.params=
+comment1.target=java.util.ArrayList\ getData()
+comment2.params=line
+comment2.target=java.util.ArrayList\ getInputs(java.lang.String)
+comment3.params=line
+comment3.target=java.util.ArrayList\ getExpectedOutcomes(java.lang.String)
+numComments=4

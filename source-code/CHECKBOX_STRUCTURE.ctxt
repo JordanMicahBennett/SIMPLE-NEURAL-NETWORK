@@ -1,0 +1,4 @@
+#BlueJ class context
+comment0.params=current_index\ max_boxxes\ dest_pane\ _layout_type\ scrollUpRate\ scrollDownRate
+comment0.target=CHECKBOX_STRUCTURE(int,\ int,\ javax.swing.JPanel,\ int,\ int,\ int)
+numComments=1

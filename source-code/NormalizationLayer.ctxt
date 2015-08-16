@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=
+comment0.target=NormalizationLayer()
+comment1.params=min\ max\ value
+comment1.target=double\ getNormalizedRawOutcome(double,\ double,\ double)
+comment2.params=min\ max\ value\ start\ end
+comment2.target=double\ getNormalizedRawOutcome(double,\ double,\ double,\ double,\ double)
+comment3.params=min\ value\ deviation
+comment3.target=double\ getNormalizedOutcome(double,\ double,\ double)
+comment4.params=value
+comment4.target=double\ getRoundedOutcome(double)
+numComments=5

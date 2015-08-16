@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Synapse()
+comment1.params=
+comment1.target=double\ getWeight()
+comment2.params=
+comment2.target=double\ getDeltaWeight()
+comment3.params=value
+comment3.target=void\ setWeight(double)
+comment4.params=value
+comment4.target=void\ setDeltaWeight(double)
+numComments=5

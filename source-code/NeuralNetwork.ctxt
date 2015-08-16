@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.params=topologyDescription\ consoleDisplayQuery\ proximalMeanSmoothingFactor
+comment0.target=NeuralNetwork(java.lang.String,\ boolean,\ double)
+comment1.params=
+comment1.target=CorticalColumns\ getCorticalColumns()
+comment2.params=
+comment2.target=java.lang.String\ getNeuronCardinalityMessage()
+comment3.params=
+comment3.target=java.lang.String\ getTopologyCardinalityMessage()
+comment4.params=inputStream
+comment4.target=void\ recall(java.lang.String)
+comment5.params=
+comment5.target=java.util.ArrayList\ getOutcomes()
+comment6.params=outputStream
+comment6.target=void\ quantize(java.lang.String)
+comment7.params=values
+comment7.target=void\ propagateProgressively(java.util.ArrayList)
+comment8.params=values
+comment8.target=void\ propagateRegressively(java.util.ArrayList)
+comment9.params=
+comment9.target=void\ enableEtaMutation()
+numComments=10
