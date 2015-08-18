@@ -27,7 +27,7 @@ public class Neuron implements Serializable
         for ( int sI = 0; sI < sequentiallyHierarchicallyHorizontalInputWeightCardinality; sI ++ ) 
         {
             synapses.add ( new Synapse ( ) );
-            synapses.get ( sI ).setWeight ( new java.util.Random ( ).nextDouble ( ) + -1 );
+            synapses.get ( sI ).setWeight ( new java.util.Random ( ).nextDouble ( ) );
         }
     }
     
@@ -60,7 +60,7 @@ public class Neuron implements Serializable
             
             //{sCCI - subsequent cortical column neuron iterator}
             for ( int sCCI = 0; sCCI < subsequentCorticalColumn.size ( ) - 1; sCCI ++ ) //...for [structure].size ( ) - 1 maintains bias neuron exclusion internally. This enables threshold neuron constant-ness. [bias neuron computation exclusion requires hereafter, hither-to global Neuron neuron bias exclusion, as hierarchically later references (maintain this event)]
-                returnValue += getSynapses ( ).get ( sCCI ).getWeight ( ) * subsequentCorticalColumn.get ( sCCI ).getGradient ( ); //Absent threshold constantness aligned network control, the network surjectively non-generalizes, as priorly computed sigmas of calculations effectively generate linearly surjective, non varying outcomes. A non-differentiable network is futile.
+                returnValue += getSynapses ( ).get ( sCCI ).getWeight ( ) * subsequentCorticalColumn.get ( sCCI ).getGradient ( ); //Absent threshold constantness aligned network control, the network surjectively non-generalizes, as priorly computed sigmas of calculations effectively generate linearly surjective, non varying outcomes. A non-differentiable network is futile. Such differentiability yields variabilities of expression of pattern detection. 
                 
             return returnValue;
         }
