@@ -165,7 +165,7 @@ public class UNICODE_GuiPanel extends JPanel
             PAINT_PANEL.setBounds ( 0, ( applicationHeight / 3 ), applicationWidth, applicationHeight / 2 );
         else
             //establish checkboxPlatform dimensions   
-            checkboxPlatform.PLATFORM.setBounds ( applicationWidth/2 - checkboxPlatform.PLATFORM.getWidth ( )/2, 300, checkboxPlatform.PLATFORM.getWidth ( ), checkboxPlatform.PLATFORM.getHeight ( ) ); 
+            checkboxPlatform.PLATFORM.setBounds ( applicationWidth / 2 - checkboxPlatform.PLATFORM.getWidth ( ) / 2, 300, checkboxPlatform.PLATFORM.getWidth ( ), checkboxPlatform.PLATFORM.getHeight ( ) ); 
     }
 }
 

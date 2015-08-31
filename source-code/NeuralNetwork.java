@@ -56,11 +56,12 @@ public class NeuralNetwork
                     corticalColumns.add ( new CorticalColumn ( ) );
                     //define neuron interconnectivity input weights maxima
                     int sequentiallyHierarchicallyHorizontalInputWeightCardinality = neuralNetworkTopology.size ( ) == 0 ? 0 : ( ( cCI + 1 ) < neuralNetworkTopology.size ( ) ) ? neuralNetworkTopology.get ( cCI + 1 ) : 0;
+                    int priorlyHierarchicallyHorizontalInputWeightCardinality = neuralNetworkTopology.size ( ) == 0 ? 0 : ( ( cCI - 1 ) > 0 ) ? neuralNetworkTopology.get ( cCI - 1 ) : 0;
                 
                     //define neurons
                     //{cCNI-cortical columns neurons iterator}
                     for ( int cCNI = 0; cCNI <= neuralNetworkTopology.get ( cCI ); cCNI ++ ) //...for ( <= ) enables bias/threshold generation
-                        corticalColumns.get ( cCI ).add ( new Neuron ( sequentiallyHierarchicallyHorizontalInputWeightCardinality, cCNI, eta, alpha ) );
+                        corticalColumns.get ( cCI ).add ( new Neuron ( sequentiallyHierarchicallyHorizontalInputWeightCardinality, priorlyHierarchicallyHorizontalInputWeightCardinality, cCNI, eta, alpha, Variance.TANGENTIALLY_HYPERBOLIC ) );
                     //{cCNI-cortical columns neurons iterator}
                     for ( int cCNI = 0; cCNI <= neuralNetworkTopology.get ( cCI ); cCNI ++ ) //...for ( <= ) enables bias/threshold generation
                     {

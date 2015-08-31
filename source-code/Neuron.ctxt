@@ -1,6 +1,6 @@
 #BlueJ class context
-comment0.params=sequentiallyHierarchicallyHorizontalInputWeightCardinality\ identifierIndex\ eta\ alpha
-comment0.target=Neuron(int,\ int,\ double,\ double)
+comment0.params=sequentiallyHierarchicallyHorizontalInputWeightCardinality\ priorlyHierarchicallyHorizontalInputWeightCardinality\ identifierIndex\ eta\ alpha\ variance
+comment0.target=Neuron(int,\ int,\ int,\ double,\ double,\ Variance)
 comment1.params=
 comment1.target=double\ getOutcome()
 comment10.params=subsequentCorticalColumn
