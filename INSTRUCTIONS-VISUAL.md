@@ -18,11 +18,7 @@ i.[logical operation [xor] detection cycle] - xor detection
 
 ii.[visual [digit] detection cycle] - vision detection
 
-NOTE: Synthetic-sentience encompasses colorimetric-space [relative luminance](https://en.wikipedia.org/wiki/Relative_luminance) based pixel extraction/representation. See [source-code/data/packages/UNICODE/UNICODE_ConveniencePack/](https://github.com/JordanMicahBennett/SYNTHETIC-SENTIENCE/blob/master/source-code/data/packages/UNICODE/UNICODE_ConveniencePack.java)getPixels ( String fileName ) 
-
-and
-
-[source-code/data/packages/UNICODE/UNICODE_PaintPanel](https://github.com/JordanMicahBennett/SYNTHETIC-SENTIENCE/blob/master/source-code/data/packages/UNICODE/UNICODE_PaintPanel.java)save ( )
+NOTE: Synthetic-sentience encompasses colorimetric-space [relative luminance](https://en.wikipedia.org/wiki/Relative_luminance) based pixel extraction/representation. See [source-code/data/packages/UNICODE/UNICODE_ConveniencePack/](https://github.com/JordanMicahBennett/SYNTHETIC-SENTIENCE/blob/master/source-code/data/packages/UNICODE/UNICODE_ConveniencePack.java)getPixels ( String fileName ) and [source-code/data/packages/UNICODE/UNICODE_PaintPanel/](https://github.com/JordanMicahBennett/SYNTHETIC-SENTIENCE/blob/master/source-code/data/packages/UNICODE/UNICODE_PaintPanel.java)save ( )
 
 		
 		
