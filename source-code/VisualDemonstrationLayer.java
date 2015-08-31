@@ -24,7 +24,7 @@ public class VisualDemonstrationLayer extends GenericDemonstrationLayer //autoen
             SUPERVISION_LAYER = new VisualSupervisionLayer ( "data/config/visual/small.ini", consoleDisplayQuery ); //supervision data for training
             NEURAL_NETWORK = new NeuralNetwork ( "1024,1024,10", consoleDisplayQuery, SUPERVISION_LAYER.getData ( ).size ( ) ); //1024x1024x10 nodal configuration
             
-            //{sLII - supervision layer data iterator}
+            //{sLIDI - supervision layer data iterator}
             for ( int sLDI = 0; sLDI < SUPERVISION_LAYER.getData ( ).size ( ); sLDI ++ )
             {  
                 NEURAL_NETWORK.propagateProgressively ( SUPERVISION_LAYER.getInputs ( SUPERVISION_LAYER.getData ( ).get ( sLDI ) ) );

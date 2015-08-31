@@ -37,7 +37,6 @@ Ensure that the 5000 32x32 pattern images are in [source-code/data/images/](http
 NOTE: Whence extraction has completed, you shall see source-code/data/images/patterns/test-1.bmp through to directory/images/patterns/test-5000.bmp....
 
 
-
 DETECTING
 =======
 i.Freely illustrate a digit by brushing such amidst vacant area betwixt button dock and console output.
@@ -51,6 +50,10 @@ iv.See "RECALLING", "QUANTIZING" & "INSTRUCTING"
 NOTE: Instruction cycle converges on variations of unpacked image data ([source-code/data/config/](https://github.com/JordanMicahBennett/SYNTHETIC-SENTIENCE/tree/master/source-code/data/config)(small|medium|large|very large).ini), such that network instruction is occur-able in partitions. [See [source-code/data/config/readme-config-details.md](https://github.com/JordanMicahBennett/SYNTHETIC-SENTIENCE/blob/master/source-code/data/config/readme-config-details.md)]
 
 Select instruction partition via zeroeth parameter in initialization of SUPERVISION_LAYER variable, via [source-code/VisualDemonstrationLayer.java](https://github.com/JordanMicahBennett/SYNTHETIC-SENTIENCE/blob/master/source-code/VisualDemonstrationLayer.java)/run ( ) method.
+
+
+NOTE: Synthetic-sentience encompasses colorimetric-space relative luminance based pixel extraction. See [source-code/data/packages/UNICODE_ConveniencePack.getPixels ( String fileName )](https://github.com/JordanMicahBennett/SYNTHETIC-SENTIENCE/blob/master/source-code/data/packages/UNICODE/UNICODE_ConveniencePack.java)
+
 
 
 

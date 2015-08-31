@@ -8,6 +8,9 @@ import data.packages.UNICODE.UNICODE_ConveniencePack;
 
 public class VisualSupervisionLayer extends GenericSupervisionLayer
 {
+    //define feature(s)
+    private NormalizationLayer normalizationLayer = new NormalizationLayer ( );
+    
     //define constructor
     public VisualSupervisionLayer ( String fileName, boolean consoleDisplayQuery )
     {
@@ -22,11 +25,17 @@ public class VisualSupervisionLayer extends GenericSupervisionLayer
             ArrayList <Double> returnValue = new ArrayList <Double> ( );
             
             String [ ] _line = line.split ( "::" );
+            String outcome = "";
+            int FILTER_BOUNDARY = 80; //See NormalizationLayer ( ).getRichlyFilteredLuminanceOutcome ( ) . Test via data/miscellaneous/___unused/_test.java. A lower boundary requires higher space-time complexity, while capturing a higher value of entropic pixel values. (High entropy is sub-optimal).
             
             //{pI = pixels iterator}
             for ( int pI = 0; pI < conveniencePack.getPixels ( _line [ 0 ] ).size ( ); pI ++ )
-                returnValue.add ( Double.parseDouble ( conveniencePack.getPixels ( _line [ 0 ] ).get ( pI ).toString ( ) ) );
-                    
+            {
+                returnValue.add ( normalizationLayer.getRichlyFilteredLuminanceOutcome ( Double.parseDouble ( conveniencePack.getPixels ( _line [ 0 ] ).get ( pI ).toString ( ) ), FILTER_BOUNDARY ) );
+            }
+                  
+            System.out.println ( outcome );
+            
             return returnValue;
         }
         public ArrayList <Double> getExpectedOutcomes ( String line )

@@ -711,7 +711,7 @@ public class UNICODE_ConveniencePack
                 for ( int j = 0; j < image.getWidth ( ); j ++ )
                 {
                     Color colour = new Color ( image.getRGB ( j, i ) );
-                    returnValue.add ( Double.parseDouble ( "" + getArraySum ( new int [ ] { colour.getRed ( ) + colour.getGreen ( ) + colour.getBlue ( ) } ) ) );
+                    returnValue.add ( getArraySum ( new double [ ] { ( 0.2126 * colour.getRed ( ) ), ( 0.7152 * colour.getGreen ( ) ), ( 0.0722 * colour.getBlue ( ) ) } ) ); //colorimetric-space relative luminance based pixel extraction. ( SYNTHETIC_SENTIENCE )
                 }
             }
         } 
@@ -888,6 +888,16 @@ public class UNICODE_ConveniencePack
     public int getArraySum ( int [ ] value )
     {
         int returnValue = 0;
+        
+        for ( int i = 0; i < value.length; i ++ )
+            returnValue += value [ i ];
+        
+        return returnValue;
+    }
+	
+    public double getArraySum ( double [ ] value )
+    {
+        double returnValue = 0;
         
         for ( int i = 0; i < value.length; i ++ )
             returnValue += value [ i ];
