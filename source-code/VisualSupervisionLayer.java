@@ -26,7 +26,7 @@ public class VisualSupervisionLayer extends GenericSupervisionLayer
             
             String [ ] _line = line.split ( "::" );
 
-            int FILTER_BOUNDARY = 80; //See NormalizationLayer ( ).getRichlyFilteredLuminanceOutcome ( ) . Test via data/miscellaneous/___unused/_test.java. A lower boundary requires higher space-time complexity, while capturing a higher value of entropic pixel values. (High entropy is sub-optimal).
+            int FILTER_BOUNDARY = 80; //See NormalizationLayer ( ).getRichlyFilteredLuminanceOutcome ( ) . Test via data/miscellaneous/___unused/_test.java. A lower boundary requires higher space-time complexity, while capturing a higher range of entropic? pixel values. (Abundant entropy is sub-optimal).
             
             //{pI = pixels iterator}
             for ( int pI = 0; pI < conveniencePack.getPixels ( _line [ 0 ] ).size ( ); pI ++ )
