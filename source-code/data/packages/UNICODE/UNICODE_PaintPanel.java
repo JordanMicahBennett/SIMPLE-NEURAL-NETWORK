@@ -154,7 +154,6 @@ public class UNICODE_PaintPanel extends JPanel
 				//compute luminance, and alter pixels appropriately, such that black pixels (painted) are replaced with white (detected).
 				double luminance = conveniencePack.getArraySum ( new double [ ] { ( ( ( int ) ( 0.2126 * image.getRGB ( x, y ) ) ) >> 16 ) & 0xFF, ( ( ( int ) ( 0.7152 * image.getRGB ( x, y ) ) ) >> 8 ) & 0xFF, ( ( int ) ( 0.0722 * image.getRGB ( x, y ) ) ) & 0xFF } );
 				
-				//image.setRGB ( x, y, imageColor.getRGB ( ) );
 				//System.out.println ( ( luminance > 500 ) ? "" + SUPERVISION_LAYER_FILTER_BOUNDARY + "\n" : luminance ); //{<500} encodes as black relenting painted pixels. (lighter)
 				
 				image.setRGB ( x, y, ( luminance > 500 ) ? SUPERVISION_LAYER_FILTER_BOUNDARY : 0 ); //{<500} encodes as black relenting painted pixels. (lighter). I otherwise return 0, as I am uninterested via that pixel ( not detected )
