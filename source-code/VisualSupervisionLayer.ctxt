@@ -1,6 +1,6 @@
 #BlueJ class context
-comment0.params=fileName\ consoleDisplayQuery
-comment0.target=VisualSupervisionLayer(java.lang.String,\ boolean)
+comment0.params=fileName\ consoleDisplayQuery\ filterBoundary
+comment0.target=VisualSupervisionLayer(java.lang.String,\ boolean,\ int)
 comment1.params=line
 comment1.target=java.util.ArrayList\ getInputs(java.lang.String)
 comment2.params=line

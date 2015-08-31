@@ -9,10 +9,14 @@ import java.util.ArrayList;
 
 public class VisualDemonstrationLayer extends GenericDemonstrationLayer //autoencoder
 {
+    //define features
+    public int FILTER_BOUNDARY = 0;
+
     //define constructor
-    public VisualDemonstrationLayer ( boolean consoleDisplayQuery )
+    public VisualDemonstrationLayer ( boolean consoleDisplayQuery, int FILTER_BOUNDARY )
     {
         super ( consoleDisplayQuery );
+        this.FILTER_BOUNDARY = FILTER_BOUNDARY;
     }
     
     //define methods
@@ -21,7 +25,7 @@ public class VisualDemonstrationLayer extends GenericDemonstrationLayer //autoen
      
         public void run ( ) //this must be binded with updateOutcomeDocument. {TO DO}
         {
-            SUPERVISION_LAYER = new VisualSupervisionLayer ( "data/config/visual/small.ini", consoleDisplayQuery ); //supervision data for training
+            SUPERVISION_LAYER = new VisualSupervisionLayer ( "data/config/visual/small.ini", consoleDisplayQuery, FILTER_BOUNDARY ); //supervision data for training
             NEURAL_NETWORK = new NeuralNetwork ( "1024,1024,10", consoleDisplayQuery, SUPERVISION_LAYER.getData ( ).size ( ) ); //1024x1024x10 nodal configuration
             
             //{sLIDI - supervision layer data iterator}

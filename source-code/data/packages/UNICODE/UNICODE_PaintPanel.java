@@ -51,8 +51,12 @@ public class UNICODE_PaintPanel extends JPanel
 				public boolean CONTINUOUS_MODE = false; //non-dotted/dotted brush.
 				//undo/redo mechanism
 				private ArrayList <Ellipse2D> proximalStrokes = new ArrayList <Ellipse2D> ( ); //recorded strokes
+				//utility
+				private UNICODE_ConveniencePack conveniencePack = new UNICODE_ConveniencePack ( );
+				//SUPERVISION_LAYER_FILTER_BOUNDARY (enables synthetic sentience digit detection; generating buffered images @ the luminance perceivable boundary )
+				private int SUPERVISION_LAYER_FILTER_BOUNDARY = 0;
 
-    public UNICODE_PaintPanel ( int strokeSpan, int minimumStrokeSpan, int maximumStrokeSpan, Color strokeColour, Color backgroundColour, Color dataSetBackgroundColour, int frameHeight )
+    public UNICODE_PaintPanel ( int strokeSpan, int minimumStrokeSpan, int maximumStrokeSpan, Color strokeColour, Color backgroundColour, Color dataSetBackgroundColour, int frameHeight, int SUPERVISION_LAYER_FILTER_BOUNDARY )
     {
         //stroke colour
         this.strokeColour = strokeColour;
@@ -68,6 +72,9 @@ public class UNICODE_PaintPanel extends JPanel
 		this.strokeSpanDisplacement = 1; //displace stroke by 1 per stroke pass
 		this.defaultStrokeSpanDisplacement = strokeSpanDisplacement;
 		this.frameHeight = frameHeight;
+		
+		//SUPERVISION_LAYER_FILTER_BOUNDARY (enables synthetic sentience digit detection; generating buffered images @ the luminance perceivable boundary )
+		this.SUPERVISION_LAYER_FILTER_BOUNDARY = SUPERVISION_LAYER_FILTER_BOUNDARY;
 		
         //set background colour
         setBackground ( backgroundColour );
@@ -137,7 +144,24 @@ public class UNICODE_PaintPanel extends JPanel
 		
 		
         paint ( graphics2d );
-        
+     
+		//per pixel editing ( SYNTHETIC_SENTIENCE )
+		for ( int y = 0; y < image.getHeight ( ); y ++ )
+			for ( int x = 0; x < image.getWidth ( ); x ++ )
+			{
+				java.awt.Color imageColor = new java.awt.Color ( image.getRGB ( x, y ) );
+				
+				//compute luminance, and alter pixels appropriately, such that black pixels (painted) are replaced with white (detected).
+				double luminance = conveniencePack.getArraySum ( new double [ ] { ( ( ( int ) ( 0.2126 * image.getRGB ( x, y ) ) ) >> 16 ) & 0xFF, ( ( ( int ) ( 0.7152 * image.getRGB ( x, y ) ) ) >> 8 ) & 0xFF, ( ( int ) ( 0.0722 * image.getRGB ( x, y ) ) ) & 0xFF } );
+				
+				//image.setRGB ( x, y, imageColor.getRGB ( ) );
+				//System.out.println ( ( luminance > 500 ) ? "" + SUPERVISION_LAYER_FILTER_BOUNDARY + "\n" : luminance ); //{<500} encodes as black relenting painted pixels. (lighter)
+				
+				image.setRGB ( x, y, ( luminance > 500 ) ? SUPERVISION_LAYER_FILTER_BOUNDARY : 0 ); //{<500} encodes as black relenting painted pixels. (lighter). I otherwise return 0, as I am uninterested via that pixel ( not detected )
+				
+				 //colorimetric-space relative luminance based pixel generation. ( SYNTHETIC_SENTIENCE )
+			}
+				
         try
         {
             javax.imageio.ImageIO.write ( image, extension, new java.io.File ( outputDirectory ) );
@@ -149,7 +173,7 @@ public class UNICODE_PaintPanel extends JPanel
 		setBackground ( backgroundColour );
 		
 		if ( enableImageResizingOnSaveQuery )
-			new UNICODE_ConveniencePack ( ).enableImageResizing ( outputDirectory, resizeDimension );
+			conveniencePack.enableImageResizing ( outputDirectory, resizeDimension );
     }
     
     
