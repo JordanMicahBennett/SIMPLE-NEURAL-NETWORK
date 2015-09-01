@@ -53,10 +53,9 @@ public class UNICODE_PaintPanel extends JPanel
 				private ArrayList <Ellipse2D> proximalStrokes = new ArrayList <Ellipse2D> ( ); //recorded strokes
 				//utility
 				private UNICODE_ConveniencePack conveniencePack = new UNICODE_ConveniencePack ( );
-				//SUPERVISION_LAYER_FILTER_BOUNDARY (enables synthetic sentience digit detection; generating buffered images @ the luminance perceivable boundary )
-				private int SUPERVISION_LAYER_FILTER_BOUNDARY = 0;
 
-    public UNICODE_PaintPanel ( int strokeSpan, int minimumStrokeSpan, int maximumStrokeSpan, Color strokeColour, Color backgroundColour, Color dataSetBackgroundColour, int frameHeight, int SUPERVISION_LAYER_FILTER_BOUNDARY )
+
+    public UNICODE_PaintPanel ( int strokeSpan, int minimumStrokeSpan, int maximumStrokeSpan, Color strokeColour, Color backgroundColour, Color dataSetBackgroundColour, int frameHeight )
     {
         //stroke colour
         this.strokeColour = strokeColour;
@@ -73,9 +72,7 @@ public class UNICODE_PaintPanel extends JPanel
 		this.defaultStrokeSpanDisplacement = strokeSpanDisplacement;
 		this.frameHeight = frameHeight;
 		
-		//SUPERVISION_LAYER_FILTER_BOUNDARY (enables synthetic sentience digit detection; generating buffered images @ the luminance perceivable boundary )
-		this.SUPERVISION_LAYER_FILTER_BOUNDARY = SUPERVISION_LAYER_FILTER_BOUNDARY;
-		
+
         //set background colour
         setBackground ( backgroundColour );
         
@@ -153,10 +150,9 @@ public class UNICODE_PaintPanel extends JPanel
 				
 				//compute luminance, and alter pixels appropriately, such that black pixels (painted) are replaced with white (detected).
 				double luminance = conveniencePack.getArraySum ( new double [ ] { ( ( ( int ) ( 0.2126 * image.getRGB ( x, y ) ) ) >> 16 ) & 0xFF, ( ( ( int ) ( 0.7152 * image.getRGB ( x, y ) ) ) >> 8 ) & 0xFF, ( ( int ) ( 0.0722 * image.getRGB ( x, y ) ) ) & 0xFF } );
+
 				
-				//System.out.println ( ( luminance > 500 ) ? "" + SUPERVISION_LAYER_FILTER_BOUNDARY + "\n" : luminance ); //{<500} encodes as black relenting painted pixels. (lighter)
-				
-				image.setRGB ( x, y, ( luminance > 500 ) ? SUPERVISION_LAYER_FILTER_BOUNDARY : 0 ); //{<500} encodes as black relenting painted pixels. (lighter). I otherwise return 0, as I am uninterested via that pixel ( not detected )
+				image.setRGB ( x, y, ( luminance > 500 ) ? -1 : 1 ); //{<500} encodes as black relenting painted pixels. (lighter). I otherwise return 0, as I am uninterested via that pixel ( not detected )
 				
 				 //colorimetric-space relative luminance based pixel generation. ( SYNTHETIC_SENTIENCE )
 			}

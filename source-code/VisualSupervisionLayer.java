@@ -32,7 +32,6 @@ public class VisualSupervisionLayer extends GenericSupervisionLayer
             for ( int pI = 0; pI < conveniencePack.getPixels ( _line [ 0 ] ).size ( ); pI ++ )
                 returnValue.add ( normalizationLayer.getRichlyFilteredLuminanceOutcome ( Double.parseDouble ( conveniencePack.getPixels ( _line [ 0 ] ).get ( pI ).toString ( ) ), filterBoundary ) );
 
-
             return returnValue;
         }
         public ArrayList <Double> getExpectedOutcomes ( String line )

@@ -77,7 +77,7 @@ public class UNICODE_GuiPanel extends JPanel
             //UNICODE_MenuPanel ( ArrayList <Object> _customComponentList, boolean menuVisibility, int _xCoord, int _yCoord, int _MAXIMUM_BUTTONS, int BUTTON_PROXIMITY, int AXIS_PROXIMITY, String axisDirection, String axisLayoutType, String buttonListDirectory, int buttonWidth, int buttonHeight, Color bgColour, Color buttonOutlineColour, String _buttonShapeType,  int arcHeight, int arcDepth, int lastButtonChopValue )
             menuButtonDock = new VISUAL_MENU_BUTTON_DOCK ( generatedCustomComponentList ( ), true, 120, 80, MAXIMUM_BUTTONS, 60, 2220, "clockwise", "horizontal", "data/images/main menu/visual/", BUTTON_SPAN, BUTTON_SPAN, Color.white, Color.white, "rr", 0, 0, BUTTON_SPAN/3 );       
 
-            PAINT_PANEL = new UNICODE_PaintPanel ( 40, 1, 90, Color.black, Color.white, new Color ( 17, 34, 51 ), applicationHeight, ( ( VisualDemonstrationLayer ) demonstrationLayer ).FILTER_BOUNDARY );
+            PAINT_PANEL = new UNICODE_PaintPanel ( 40, 1, 90, Color.black, Color.white, new Color ( 17, 34, 51 ), applicationHeight );
             PAINT_PANEL.setup ( "data/images/temporary/_synonymous.bmp", "bmp", true, new Dimension ( 32, 32 ) );
             
             add ( PAINT_PANEL );

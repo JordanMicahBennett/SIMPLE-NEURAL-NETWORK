@@ -9,8 +9,9 @@ public class _test
     public static void main ( String arguments [ ] )
     {
         //ArrayList <Double> pixels = new UNICODE_ConveniencePack ( ).getPixels ( "data/images/miscellaneous/___unused/_test.png" );
-        ArrayList <Double> pixels = new UNICODE_ConveniencePack ( ).getPixels ( "data/images/patterns/test-31.bmp" );        
-        
+        ArrayList <Double> pixels = new UNICODE_ConveniencePack ( ).getPixels ( "data/images/temporary/_synonymous.bmp" );        
+        //'ArrayList <Double> pixels = new UNICODE_ConveniencePack ( ).getPixels ( "data/images/patterns/test-31.bmp" ); 
+		
         String outcome = "";
         int inputVectorSpan = 32, filterBoundary = 100;
         
