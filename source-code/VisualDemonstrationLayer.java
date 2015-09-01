@@ -25,7 +25,7 @@ public class VisualDemonstrationLayer extends GenericDemonstrationLayer //autoen
      
         public void run ( ) //this must be binded with updateOutcomeDocument. {TO DO}
         {
-            SUPERVISION_LAYER = new VisualSupervisionLayer ( "data/config/visual/small.ini", consoleDisplayQuery, FILTER_BOUNDARY ); //supervision data for training
+            SUPERVISION_LAYER = new VisualSupervisionLayer ( "data/config/visual/medium.ini", consoleDisplayQuery, FILTER_BOUNDARY ); //supervision data for training
             NEURAL_NETWORK = new NeuralNetwork ( "1024,1024,10", consoleDisplayQuery, SUPERVISION_LAYER.getData ( ).size ( ) ); //1024x1024x10 nodal configuration
             
             //{sLIDI - supervision layer data iterator}

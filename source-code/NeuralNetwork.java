@@ -14,6 +14,7 @@ public class NeuralNetwork
     private double gradientError; //gradient error
     private boolean consoleDisplayQuery; //determines whether System.out.println calls are executed
     public double eta, alpha;
+    public Variance variance;
     
     //establish constructor
     public NeuralNetwork ( String topologyDescription, boolean consoleDisplayQuery, double proximalMeanSmoothingFactor )
@@ -28,11 +29,14 @@ public class NeuralNetwork
             //define proximalMeanSmoothingFactor -> data training pass cardinality
             this.proximalMeanSmoothingFactor = proximalMeanSmoothingFactor;
             
-            //define overall learning rate
-            eta = 0.3;
+            //define overall learning rate (gradient vanishes for eta > 0.2, whilst gradientError & netError implodes for eta > 0.001) Regularization: normalize ( proximalMeanError ), normalize ( gradientError ), normalize ( exponent norm on the order of input vector size, rather than square. ). Regularized signals regress, imposing non-hyperparameter implosion/explosion/vanishing bounding.
+            eta = 0.2; 
             
             //define momentum
             alpha = 0.5;
+            
+            //define variance
+            variance = Variance.TANGENTIALLY_HYPERBOLIC; //Variance.LINEARLY_RECTIFIED | Variance.TANGENTIALLY_HYPERBOLIC
             
             //define proximalMeanError
             proximalMeanError = 1.0;
@@ -61,7 +65,7 @@ public class NeuralNetwork
                     //define neurons
                     //{cCNI-cortical columns neurons iterator}
                     for ( int cCNI = 0; cCNI <= neuralNetworkTopology.get ( cCI ); cCNI ++ ) //...for ( <= ) enables bias/threshold generation
-                        corticalColumns.get ( cCI ).add ( new Neuron ( sequentiallyHierarchicallyHorizontalInputWeightCardinality, priorlyHierarchicallyHorizontalInputWeightCardinality, cCNI, eta, alpha, Variance.TANGENTIALLY_HYPERBOLIC ) );
+                        corticalColumns.get ( cCI ).add ( new Neuron ( sequentiallyHierarchicallyHorizontalInputWeightCardinality, priorlyHierarchicallyHorizontalInputWeightCardinality, cCNI, eta, alpha, variance ) );
                     //{cCNI-cortical columns neurons iterator}
                     for ( int cCNI = 0; cCNI <= neuralNetworkTopology.get ( cCI ); cCNI ++ ) //...for ( <= ) enables bias/threshold generation
                     {
@@ -146,13 +150,13 @@ public class NeuralNetwork
             //Exploit quadratic phenomenon convex nature, thereafter generating globally converging parabola process, herein generating cost a priore 
             double sigma = 0.0;
             for ( int oCCNI = 0; oCCNI < outcomeCorticalColumn.size ( ) - 1; oCCNI ++ ) //...for [structure].size ( ) - 1 separately implies bias neuron exclusion. Bias neuron exclusion occurs globally {with the exception of hidden gradient computation} This enables threshold neuron constant-ness.
-                sigma += Math.pow ( ( values.get ( oCCNI ) - outcomeCorticalColumn.get ( oCCNI ).getOutcome ( ) ), 2 ); //Absent threshold constantness aligned network control, the network surjectively non-generalizes, as priorly computed sigmas of calculations effectively generate linearly surjective, non varying outcomes. A non-differentiable network is futile. Such differentiability yields variabilities of expression of pattern detection.
+                sigma += Math.pow ( ( values.get ( oCCNI ) - outcomeCorticalColumn.get ( oCCNI ).getOutcome ( ) ), values.size ( ) ); //Absent threshold constantness aligned network control, the network surjectively non-generalizes, as priorly computed sigmas of calculations effectively generate linearly surjective, non varying outcomes. A non-differentiable network is futile. Such differentiability yields variabilities of expression of pattern detection.
                 
-            netError = Math.sqrt ( sigma / outcomeCorticalColumn.size ( ) - 1 );
+            netError = new NormalizationLayer ( ).getNormalizedOutcome ( -1, Math.sqrt ( sigma / outcomeCorticalColumn.size ( ) - 1 ), 1, -1, 1 );
             
             //compute proximalMeanError
             proximallyProximalMeanError = proximalMeanError;
-            proximalMeanError = ( proximalMeanError * proximalMeanSmoothingFactor + netError ) / ( proximalMeanSmoothingFactor + 1.0 );
+            proximalMeanError = new NormalizationLayer ( ).getNormalizedOutcome ( -1, ( proximalMeanError * proximalMeanSmoothingFactor + netError ) / ( proximalMeanSmoothingFactor + 1.0 ), 1, -1, 1 );
             
             //compute G(0) = outcome gradients
             for ( int oCCNI = 0; oCCNI < outcomeCorticalColumn.size ( ) - 1; oCCNI ++ )
@@ -181,7 +185,6 @@ public class NeuralNetwork
                 for ( int sCCNI = 0; sCCNI < synonymousCorticalColumn.size ( ) - 1; sCCNI ++ )
                     synonymousCorticalColumn.get ( sCCNI ).update ( priorCorticalColumn );
             }
-            
             //enableEtaMutation 
             enableEtaMutation ( );
         }
@@ -190,9 +193,9 @@ public class NeuralNetwork
         //numerical checking enables polynomial time gradient estimation. [recall, eta effects as a [Neuron] gradient's multiplier]
         public void enableEtaMutation ( )
         {
-            double thresholdCeiling = .001, thresholdFloor = .01, decrementalFactor = .999, incrementalFactor = 1.005;
+            double thresholdCeiling = .001, thresholdFloor = .01, decrementalFactor = .999, incrementalFactor = 1.005; //Here, I have utilized David Miller's eta mutator components initialization
             
-            gradientError = ( proximalMeanError - proximallyProximalMeanError ) / proximalMeanError;
+            gradientError = new NormalizationLayer ( ).getNormalizedOutcome ( -1, ( proximalMeanError - proximallyProximalMeanError ) / proximalMeanError, 1, -1, 1 );
             
             eta = thresholdCeiling > 0 && thresholdFloor > 0 && incrementalFactor >= 1 && decrementalFactor >= 0 && decrementalFactor <= 1 ? gradientError > thresholdCeiling ? eta * decrementalFactor : gradientError < - thresholdFloor ? eta * incrementalFactor : eta : eta;
         } 
