@@ -191,6 +191,7 @@ public class NeuralNetwork
         
         //numerical gradient estimation/checking. 
         //numerical checking enables polynomial time gradient estimation. [recall, eta effects as a [Neuron] gradient's multiplier]
+        //ReLU shall perhaps doff this requirement. Albeit ReLU is problematic.
         public void enableEtaMutation ( )
         {
             double thresholdCeiling = .001, thresholdFloor = .01, decrementalFactor = .999, incrementalFactor = 1.005; //Here, I have utilized David Miller's eta mutator components initialization
