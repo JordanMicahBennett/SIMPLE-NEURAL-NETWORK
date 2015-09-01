@@ -31,7 +31,7 @@ public class NeuralNetwork
             
             //define overall learning rate 
             //Par visual detection, (gradient vanishes for eta > 0.2, whilst gradientError & netError implodes for eta > 0.001) Regularization: normalize ( proximalMeanError ), normalize ( gradientError ), normalize ( exponent norm on the order of input vector size, rather than square. [input scale invariance?] ). Regularized signals regress, imposing non-hyperparameter implosion/explosion/vanishing bounding.
-            //Albeit eta = .2 satisfies concurrently in visual/xor computation.
+            //Albeit eta = .2 satisfies concurrently in visual/xor computation. Synthetic Sentience needn't be altered abound such satisfaction.
             eta = 0.2; 
             
             //define momentum
