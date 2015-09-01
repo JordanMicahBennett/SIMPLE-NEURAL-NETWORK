@@ -108,7 +108,7 @@ Par exemplification:
 
 A.Outcome: [ 1.0,-1.0,-1.0,-1.0,-1.0,-1.0,-1.0,-1.0,-1.0,-1.0 ] on [ proximally-freely-drawn-selection ]
 
-Strongly indicates perhaps; one (1) is detected, based on freely drawn non-supervised input.
+Strongly indicates perhaps; zero (0) is detected, based on freely drawn non-supervised input.
 
 
 B.Outcome: [ -1.0,-1.0,-1.0,-1.0,-1.0,-1.0,-1.0,-1.0,-1.0,-0.923 ] on [ proximally-freely-drawn-selection ] 
