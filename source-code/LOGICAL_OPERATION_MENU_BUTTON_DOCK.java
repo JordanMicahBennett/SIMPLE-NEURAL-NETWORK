@@ -30,7 +30,7 @@ public class LOGICAL_OPERATION_MENU_BUTTON_DOCK extends GENERIC_MENU_BUTTON_DOCK
         if ( getMenu ( ).getButtonList ( ).get ( 0 ).contains ( mEvent.getX ( ), mEvent.getY ( ) ) )
         {
             UNICODE_GuiPanel guiPanel = ( UNICODE_GuiPanel ) getCustomComponentList ( ).get ( 0 );
-            
+         
             //derive input for facing unsupervised run, with respect to ux checkbox selection.
             String unsupervisedInput = "";
             for ( int cI = 0; cI < guiPanel.checkboxPlatform.getCheckboxes ( ).size ( ); cI ++ )
@@ -42,6 +42,7 @@ public class LOGICAL_OPERATION_MENU_BUTTON_DOCK extends GENERIC_MENU_BUTTON_DOCK
             
             //reveal outcome in ux display
             guiPanel.consoleField.updateLine ( 8, guiPanel.demonstrationLayer.NEURAL_NETWORK.getOutcomes ( ).toString ( ) + " on [ checkbox-selection [ " + unsupervisedInput + " ] ]" );
+          
             
             audioPlayer.playAudio ( "" + getAudioByAlias ( "e" ) ); 
         }

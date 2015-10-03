@@ -27,6 +27,7 @@ public class VISUAL_MENU_BUTTON_DOCK extends GENERIC_MENU_BUTTON_DOCK
             guiPanel.demonstrationLayer.NEURAL_NETWORK.propagateProgressively ( guiPanel.demonstrationLayer.SUPERVISION_LAYER.getInputs ( "data/images/temporary/_synonymous.bmp::......" ) );
             guiPanel.consoleField.updateLine ( 8, guiPanel.demonstrationLayer.NEURAL_NETWORK.getOutcomes ( ).toString ( ) + " on [ proximally-freely-drawn-selection ]" );
             
+                
             audioPlayer.playAudio ( "" + getAudioByAlias ( "e" ) ); 
         }
         
