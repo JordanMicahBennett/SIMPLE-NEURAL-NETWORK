@@ -10,14 +10,13 @@ Aim : Artificial neuronal instruction par xor detection.
 
 ????
 =======
-Though synthetic sentience initializes via 'visual [digit] detection cycle',
-xor detection capability is achievable via 'logical' toggle via 'visual [digit] detection cycle'.  
-Recall, cycles simply indicate neuronal instruction types. 
+Synthetic sentience initializes via '[xor] detection cycle'. 
+
+Cycles simply indicate neuronal instruction types. 
 
 i.[logical operation [xor] detection cycle] - xor detection
 
 ii.[visual [digit] detection cycle] - vision detection
-
 
 		
 		
