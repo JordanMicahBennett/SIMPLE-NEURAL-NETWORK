@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="SyntheticSentience.jnlp">
+  <information>
+    <title>SyntheticSentience</title>
+    <vendor>JordanS.T.G.C</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="SyntheticSentience.jar" size="21892" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="SyntheticSentience" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="syntheticsentience.DisplayConsole"  name="SyntheticSentience" />
+  <update check="always"/>
+</jnlp>

@@ -36,7 +36,7 @@ public class LOGICAL_OPERATION_MENU_BUTTON_DOCK extends GENERIC_MENU_BUTTON_DOCK
             for ( int cI = 0; cI < guiPanel.checkboxPlatform.getCheckboxes ( ).size ( ); cI ++ )
                 if ( guiPanel.checkboxPlatform.getCheckboxes ( ).get ( cI ).getSelectedObjects ( ) != null )
                     unsupervisedInput += "" + guiPanel.checkboxPlatform.getCheckboxes ( ).get ( cI ).getLabel ( );
-            
+        
             //unsupervised run!
             guiPanel.demonstrationLayer.NEURAL_NETWORK.propagateProgressively ( guiPanel.demonstrationLayer.SUPERVISION_LAYER.getInputs ( unsupervisedInput.replace ( " ", "" ) + "::" ) ); 
             
