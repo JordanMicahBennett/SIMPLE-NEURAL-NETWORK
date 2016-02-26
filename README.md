@@ -50,6 +50,6 @@ http://folioverse.appspot.com/
 
 
 
-MINIMUM-SECOND NEURAL NETWORK OVERVIEW
+MINIMUM-SECOND ARCHITECTURE OVERVIEW
 ============================================
 https://www.youtube.com/watch?v=sBo9vXjue-E
