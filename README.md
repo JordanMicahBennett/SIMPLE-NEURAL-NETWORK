@@ -47,3 +47,9 @@ See [INSTRUCTIONS.md](https://github.com/JordanMicahBennett/SYNTHETIC-SENTIENCE/
 AUTHOR PORTFOLIO
 ============================================
 http://folioverse.appspot.com/
+
+
+
+MINIMUM-SECOND NEURAL NETWORK OVERVIEW
+============================================
+https://www.youtube.com/watch?v=sBo9vXjue-E
