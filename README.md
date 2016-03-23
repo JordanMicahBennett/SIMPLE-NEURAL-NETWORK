@@ -44,6 +44,17 @@ See [INSTRUCTIONS.md](https://github.com/JordanMicahBennett/SYNTHETIC-SENTIENCE/
 
 
 
+MINIMUM-SECOND ARCHITECTURE OVERVIEW
+============================================
+https://www.youtube.com/watch?v=sBo9vXjue-E
+
+
+
+
+
+
 AUTHOR PORTFOLIO
 ============================================
 http://folioverse.appspot.com/
+
+
