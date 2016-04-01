@@ -48,14 +48,13 @@ public class NormalizationLayer
                 return Double.parseDouble ( new java.text.DecimalFormat ( "##.00" ).format ( value ) );
             }
             
-            //?????????? I simply derive the most desirable (highest) pixels based on boundary. [Synthetic sentience utilizes David Miller's noisy data set, whose digits ensue white]
-            public double getRichlyFilteredLuminanceOutcome ( double value, int boundary )
+            public double getHorizon ( double value, int boundary )
             {
                 return value >= boundary ? 1 : -1;
             }
-            public double getPoorlyFilteredLuminanceOutcome ( double value, int boundary )
+            public double getHorizon ( double value )
             {
-                return value <= boundary ? 1 : -1;
+                return value < 0 ? -1 : ( ( value > 0 ) ? 1 : value );
             }
         //define mutators
 }
