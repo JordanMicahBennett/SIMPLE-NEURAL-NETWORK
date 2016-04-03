@@ -187,19 +187,5 @@ public class NeuralNetwork
                 for ( int sCCNI = 0; sCCNI < synonymousCorticalColumn.size ( ) - 1; sCCNI ++ )
                     synonymousCorticalColumn.get ( sCCNI ).update ( priorCorticalColumn );
             }
-            //enableEtaMutation 
-            enableEtaMutation ( );
         }
-        
-        //numerical gradient estimation/checking. 
-        //numerical checking enables polynomial time gradient estimation. [recall, eta effects as a [Neuron] gradient's multiplier]
-        //ReLU shall perhaps doff this requirement. Albeit ReLU is problematic.
-        public void enableEtaMutation ( )
-        {
-            double thresholdCeiling = .001, thresholdFloor = .01, decrementalFactor = .999, incrementalFactor = 1.005; //Here, I have utilized David Miller's eta mutator components initialization
-            
-            gradientError = new NormalizationLayer ( ).getNormalizedOutcome ( -1, ( proximalMeanError - proximallyProximalMeanError ) / proximalMeanError, 1, -1, 1 );
-            
-            eta = thresholdCeiling > 0 && thresholdFloor > 0 && incrementalFactor >= 1 && decrementalFactor >= 0 && decrementalFactor <= 1 ? gradientError > thresholdCeiling ? eta * decrementalFactor : gradientError < - thresholdFloor ? eta * incrementalFactor : eta : eta;
-        } 
 }
