@@ -4,7 +4,7 @@ Author : Jordan Micah Bennett
 
 ????
 =======
-Synthetic sentience:
+SIMPLE-NEURAL-NETWORK
 
 i.Encompasses vision detection. See [INSTRUCTIONS-VISUAL.md](https://github.com/JordanMicahBennett/SYNTHETIC-SENTIENCE/blob/master/INSTRUCTIONS-VISUAL.md).
 
