@@ -3,7 +3,7 @@ Author : Jordan Micah Bennett
 Aim : Artificial neuronal instruction par vision detection.
 
 
-![Alt text](https://github.com/JordanMicahBennett/SYNTHETIC-SENTIENCE/blob/master/source-code/data/images/captures/0.png?raw=true "default page")
+![Alt text](https://github.com/JordanMicahBennett/SIMPLE-NEURAL-NETWORK/blob/master/source-code/data/images/captures/0.png?raw=true "default page")
 ============================================
 
 
@@ -19,22 +19,22 @@ i.[logical operation [xor] detection cycle] - xor detection
 ii.[visual [digit] detection cycle] - vision detection
 
 
-NOTE: Synthetic-sentience encompasses colorimetric-space [relative luminance](https://en.wikipedia.org/wiki/Relative_luminance) based pixel extraction/representation. See [source-code/data/packages/UNICODE/UNICODE_ConveniencePack/](https://github.com/JordanMicahBennett/SYNTHETIC-SENTIENCE/blob/master/source-code/data/packages/UNICODE/UNICODE_ConveniencePack.java)getPixels ( String fileName ) and [source-code/data/packages/UNICODE/UNICODE_PaintPanel/](https://github.com/JordanMicahBennett/SYNTHETIC-SENTIENCE/blob/master/source-code/data/packages/UNICODE/UNICODE_PaintPanel.java)save ( )
+NOTE: SIMPLE-NEURAL-NETWORK encompasses colorimetric-space [relative luminance](https://en.wikipedia.org/wiki/Relative_luminance) based pixel extraction/representation. See [source-code/data/packages/UNICODE/UNICODE_ConveniencePack/](https://github.com/JordanMicahBennett/SIMPLE-NEURAL-NETWORK/blob/master/source-code/data/packages/UNICODE/UNICODE_ConveniencePack.java)getPixels ( String fileName ) and [source-code/data/packages/UNICODE/UNICODE_PaintPanel/](https://github.com/JordanMicahBennett/SIMPLE-NEURAL-NETWORK/blob/master/source-code/data/packages/UNICODE/UNICODE_PaintPanel.java)save ( )
 
 		
 		
 SEQUENCE
 =======
-UNPACK (See 'UNPACKING') -> [source-code/UNICODE_DisplayConsole](https://github.com/JordanMicahBennett/SYNTHETIC-SENTIENCE/blob/master/source-code/UNICODE_DisplayConsole.java).void ( ) -> DETECT (See 'DETECTING')
+UNPACK (See 'UNPACKING') -> [source-code/UNICODE_DisplayConsole](https://github.com/JordanMicahBennett/SIMPLE-NEURAL-NETWORK/blob/master/source-code/UNICODE_DisplayConsole.java).void ( ) -> DETECT (See 'DETECTING')
  
 		
 		
 		
 UNPACKING
 =======
-Unpack [source-code/data/images/pattern.zip](https://github.com/JordanMicahBennett/SYNTHETIC-SENTIENCE/blob/master/source-code/data/images/patterns.zip) into the directory of images/patterns/
+Unpack [source-code/data/images/pattern.zip](https://github.com/JordanMicahBennett/SIMPLE-NEURAL-NETWORK/blob/master/source-code/data/images/patterns.zip) into the directory of images/patterns/
 
-Ensure that the 5000 32x32 pattern images are in [source-code/data/images/](https://github.com/JordanMicahBennett/SYNTHETIC-SENTIENCE/tree/master/source-code/data/images)patterns/
+Ensure that the 5000 32x32 pattern images are in [source-code/data/images/](https://github.com/JordanMicahBennett/SIMPLE-NEURAL-NETWORK/tree/master/source-code/data/images)patterns/
 
 NOTE: Whence extraction has completed, you shall see source-code/data/images/patterns/test-1.bmp through to directory/images/patterns/test-5000.bmp....
 
@@ -49,9 +49,9 @@ iii.Toggle 'detect'.
 
 iv.See "RECALLING", "QUANTIZING" & "INSTRUCTING"
 
-NOTE: Instruction cycle converges on variations of unpacked image data ([source-code/data/config/](https://github.com/JordanMicahBennett/SYNTHETIC-SENTIENCE/tree/master/source-code/data/config)(small|medium|large|very large).ini), such that network instruction is occur-able in partitions. [See [source-code/data/config/readme-config-details.md](https://github.com/JordanMicahBennett/SYNTHETIC-SENTIENCE/blob/master/source-code/data/config/readme-config-details.md)]
+NOTE: Instruction cycle converges on variations of unpacked image data ([source-code/data/config/](https://github.com/JordanMicahBennett/SIMPLE-NEURAL-NETWORK/tree/master/source-code/data/config)(small|medium|large|very large).ini), such that network instruction is occur-able in partitions. [See [source-code/data/config/readme-config-details.md](https://github.com/JordanMicahBennett/SIMPLE-NEURAL-NETWORK/blob/master/source-code/data/config/readme-config-details.md)]
 
-Select instruction partition via zeroeth parameter in initialization of SUPERVISION_LAYER variable, via [source-code/VisualDemonstrationLayer.java](https://github.com/JordanMicahBennett/SYNTHETIC-SENTIENCE/blob/master/source-code/VisualDemonstrationLayer.java)/run ( ) method.
+Select instruction partition via zeroeth parameter in initialization of SUPERVISION_LAYER variable, via [source-code/VisualDemonstrationLayer.java](https://github.com/JordanMicahBennett/SIMPLE-NEURAL-NETWORK/blob/master/source-code/VisualDemonstrationLayer.java)/run ( ) method.
 
 
 
@@ -59,26 +59,26 @@ Select instruction partition via zeroeth parameter in initialization of SUPERVIS
 
 RECALLING
 =======
-Recalling utilizes [source-code/NeuralNetwork](https://github.com/JordanMicahBennett/SYNTHETIC-SENTIENCE/blob/master/source-code/NeuralNetwork.java)/recall ( ) to remember neural network data. (learnt gradients/outcomes/weights/delta weights memorization-recollection)
+Recalling utilizes [source-code/NeuralNetwork](https://github.com/JordanMicahBennett/SIMPLE-NEURAL-NETWORK/blob/master/source-code/NeuralNetwork.java)/recall ( ) to remember neural network data. (learnt gradients/outcomes/weights/delta weights memorization-recollection)
 
 
 
 
 QUANTIZING
 =======
-Quantizing utilizes [source-code/NeuralNetwork](https://github.com/JordanMicahBennett/SYNTHETIC-SENTIENCE/blob/master/source-code/NeuralNetwork.java)/quantize ( ) to store neural network data. (learnt gradients/outcomes/weights/delta weights memorization-storage)
+Quantizing utilizes [source-code/NeuralNetwork](https://github.com/JordanMicahBennett/SIMPLE-NEURAL-NETWORK/blob/master/source-code/NeuralNetwork.java)/quantize ( ) to store neural network data. (learnt gradients/outcomes/weights/delta weights memorization-storage)
 
 
-NOTE: Par 'quantize' toggle, synthetic-sentience's physical package size shall increase, on an order of selected training configuration vector.
+NOTE: Par 'quantize' toggle, SIMPLE-NEURAL-NETWORK's physical package size shall increase, on an order of selected training configuration vector.
 
 
 
 
 INSTRUCTING
 =======
-Instruction utilizes [source-code/NeuralNetwork](https://github.com/JordanMicahBennett/SYNTHETIC-SENTIENCE/blob/master/source-code/NeuralNetwork.java)/propagateProgressively ( ) and [source-code/NeuralNetwork](https://github.com/JordanMicahBennett/SYNTHETIC-SENTIENCE/blob/master/source-code/NeuralNetwork.java)/propagateRegressively ( ) to generate instruction cycle, via 'instruct' toggle. 
+Instruction utilizes [source-code/NeuralNetwork](https://github.com/JordanMicahBennett/SIMPLE-NEURAL-NETWORK/blob/master/source-code/NeuralNetwork.java)/propagateProgressively ( ) and [source-code/NeuralNetwork](https://github.com/JordanMicahBennett/SIMPLE-NEURAL-NETWORK/blob/master/source-code/NeuralNetwork.java)/propagateRegressively ( ) to generate instruction cycle, via 'instruct' toggle. 
 
-Enhanced outcomes are occur-able via sequence: [source-code/UNICODE_DisplayConsole](https://github.com/JordanMicahBennett/SYNTHETIC-SENTIENCE/blob/master/source-code/UNICODE_DisplayConsole.java).void ( ) -> QUANTIZE -> EXIT -> [source-code/UNICODE_DisplayConsole](https://github.com/JordanMicahBennett/SYNTHETIC-SENTIENCE/blob/master/source-code/UNICODE_DisplayConsole.java).void ( ) -> RECALL -> INSTRUCT -> DETECT. 
+Enhanced outcomes are occur-able via sequence: [source-code/UNICODE_DisplayConsole](https://github.com/JordanMicahBennett/SIMPLE-NEURAL-NETWORK/blob/master/source-code/UNICODE_DisplayConsole.java).void ( ) -> QUANTIZE -> EXIT -> [source-code/UNICODE_DisplayConsole](https://github.com/JordanMicahBennett/SIMPLE-NEURAL-NETWORK/blob/master/source-code/UNICODE_DisplayConsole.java).void ( ) -> RECALL -> INSTRUCT -> DETECT. 
 
 
 
