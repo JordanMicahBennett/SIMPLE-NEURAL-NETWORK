@@ -10,7 +10,7 @@ Aim : Artificial neuronal instruction par vision detection.
 
 ????
 =======
-Though synthetic sentience initializes via 'logical operation [xor] detection cycle',
+Though SIMPLE-NEURAL-NETWORK initializes via 'logical operation [xor] detection cycle',
 visual detection capability is achievable via 'visual' toggle via 'logical [xor] detection cycle'.  
 Recall, cycles simply indicate neuronal instruction types. 
 
