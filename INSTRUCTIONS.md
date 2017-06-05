@@ -6,9 +6,9 @@ Author : Jordan Micah Bennett
 =======
 SIMPLE-NEURAL-NETWORK
 
-i.Encompasses vision detection. See [INSTRUCTIONS-VISUAL.md](https://github.com/JordanMicahBennett/SYNTHETIC-SENTIENCE/blob/master/INSTRUCTIONS-VISUAL.md).
+i.Encompasses vision detection. See [INSTRUCTIONS-VISUAL.md](https://github.com/JordanMicahBennett/SIMPLE-NEURAL-NETWORK/blob/master/INSTRUCTIONS-VISUAL.md).
 
-ii.Encompasses xor detection. See [INSTRUCTIONS-XOR.md](https://github.com/JordanMicahBennett/SYNTHETIC-SENTIENCE/blob/master/INSTRUCTIONS-XOR.md).
+ii.Encompasses xor detection. See [INSTRUCTIONS-XOR.md](https://github.com/JordanMicahBennett/SIMPLE-NEURAL-NETWORK/blob/master/INSTRUCTIONS-XOR.md).
 	
 	
 	
