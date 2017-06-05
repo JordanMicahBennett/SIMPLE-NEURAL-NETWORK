@@ -10,7 +10,7 @@ Aim : Artificial neuronal instruction par xor detection.
 
 ????
 =======
-Synthetic sentience initializes via '[xor] detection cycle'. 
+SIMPLE-NEURAL-NETWORK initializes via '[xor] detection cycle'. 
 
 Cycles simply indicate neuronal instruction types. 
 
