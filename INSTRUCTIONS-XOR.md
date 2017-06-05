@@ -3,7 +3,7 @@ Author : Jordan Micah Bennett
 Aim : Artificial neuronal instruction par xor detection.
 
 
-![Alt text](https://github.com/JordanMicahBennett/SYNTHETIC-SENTIENCE/blob/master/source-code/data/images/captures/1.png?raw=true "default page")
+![Alt text](https://github.com/JordanMicahBennett/SIMPLE-NEURAL-NETWORK/blob/master/source-code/data/images/captures/1.png?raw=true "default page")
 ============================================
 
 
@@ -22,7 +22,7 @@ ii.[visual [digit] detection cycle] - vision detection
 		
 SEQUENCE
 =======
-[source-code/UNICODE_DisplayConsole](https://github.com/JordanMicahBennett/SYNTHETIC-SENTIENCE/blob/master/source-code/UNICODE_DisplayConsole.java).void ( ) -> DETECT (See 'DETECTING')
+[source-code/UNICODE_DisplayConsole](https://github.com/JordanMicahBennett/SIMPLE-NEURAL-NETWORK/blob/master/source-code/UNICODE_DisplayConsole.java).void ( ) -> DETECT (See 'DETECTING')
  
 
 
@@ -34,30 +34,30 @@ ii.Toggle 'detect'.
 
 iii.See "RECALLING", "QUANTIZING" & "INSTRUCTING"
 
-NOTE: Instruction cycle converges on [source-code/data/config/logical operation/xor.ini](https://github.com/JordanMicahBennett/SYNTHETIC-SENTIENCE/blob/master/source-code/data/config/logical%20operation/xor.ini). [See [source-code/data/config/readme-config-details.md](https://github.com/JordanMicahBennett/SYNTHETIC-SENTIENCE/blob/master/source-code/data/config/readme-config-details.md)]
+NOTE: Instruction cycle converges on [source-code/data/config/logical operation/xor.ini](https://github.com/JordanMicahBennett/SIMPLE-NEURAL-NETWORK/blob/master/source-code/data/config/logical%20operation/xor.ini). [See [source-code/data/config/readme-config-details.md](https://github.com/JordanMicahBennett/SIMPLE-NEURAL-NETWORK/blob/master/source-code/data/config/readme-config-details.md)]
 
-Select customized instruction cycle origin via zeroeth parameter in initialization of SUPERVISION_LAYER variable, via [source-code/LogicalOperationDemonstrationLayer.java](https://github.com/JordanMicahBennett/SYNTHETIC-SENTIENCE/blob/master/source-code/LogicalOperationDemonstrationLayer.java)/run ( ) method.
+Select customized instruction cycle origin via zeroeth parameter in initialization of SUPERVISION_LAYER variable, via [source-code/LogicalOperationDemonstrationLayer.java](https://github.com/JordanMicahBennett/SIMPLE-NEURAL-NETWORK/blob/master/source-code/LogicalOperationDemonstrationLayer.java)/run ( ) method.
 
 RECALLING
 =======
-Recalling utilizes [source-code/NeuralNetwork](https://github.com/JordanMicahBennett/SYNTHETIC-SENTIENCE/blob/master/source-code/NeuralNetwork.java)/recall ( ) to remember neural network data. (learnt gradients/outcomes/weights/delta weights memorization-recollection)
+Recalling utilizes [source-code/NeuralNetwork](https://github.com/JordanMicahBennett/SIMPLE-NEURAL-NETWORK/blob/master/source-code/NeuralNetwork.java)/recall ( ) to remember neural network data. (learnt gradients/outcomes/weights/delta weights memorization-recollection)
 
 
 
 QUANTIZING
 =======
-Quantizing utilizes [source-code/NeuralNetwork](https://github.com/JordanMicahBennett/SYNTHETIC-SENTIENCE/blob/master/source-code/NeuralNetwork.java)/quantize ( ) to store neural network data. (learnt gradients/outcomes/weights/delta weights memorization-storage)
+Quantizing utilizes [source-code/NeuralNetwork](https://github.com/JordanMicahBennett/SIMPLE-NEURAL-NETWORK/blob/master/source-code/NeuralNetwork.java)/quantize ( ) to store neural network data. (learnt gradients/outcomes/weights/delta weights memorization-storage)
 
 
-NOTE: Par 'quantize' toggle, synthetic-sentience's physical package size shall increase, on an order of selected training configuration vector.
+NOTE: Par 'quantize' toggle, SIMPLE-NEURAL-NETWORK's physical package size shall increase, on an order of selected training configuration vector.
 
 
 
 INSTRUCTING
 =======
-Instruction utilizes [source-code/NeuralNetwork](https://github.com/JordanMicahBennett/SYNTHETIC-SENTIENCE/blob/master/source-code/NeuralNetwork.java)/propagateProgressively ( ) and [source-code/NeuralNetwork](https://github.com/JordanMicahBennett/SYNTHETIC-SENTIENCE/blob/master/source-code/NeuralNetwork.java)/propagateRegressively ( ) to generate instruction cycle, via 'instruct' toggle. 
+Instruction utilizes [source-code/NeuralNetwork](https://github.com/JordanMicahBennett/SIMPLE-NEURAL-NETWORK/blob/master/source-code/NeuralNetwork.java)/propagateProgressively ( ) and [source-code/NeuralNetwork](https://github.com/JordanMicahBennett/SIMPLE-NEURAL-NETWORK/blob/master/source-code/NeuralNetwork.java)/propagateRegressively ( ) to generate instruction cycle, via 'instruct' toggle. 
 
-Enhanced outcomes are occur-able via sequence: [source-code/UNICODE_DisplayConsole](https://github.com/JordanMicahBennett/SYNTHETIC-SENTIENCE/blob/master/source-code/UNICODE_DisplayConsole.java).void ( ) -> QUANTIZE -> EXIT -> [source-code/UNICODE_DisplayConsole](https://github.com/JordanMicahBennett/SYNTHETIC-SENTIENCE/blob/master/source-code/UNICODE_DisplayConsole.java).void ( ) -> RECALL -> INSTRUCT -> DETECT. 
+Enhanced outcomes are occur-able via sequence: [source-code/UNICODE_DisplayConsole](https://github.com/JordanMicahBennett/SIMPLE-NEURAL-NETWORK/blob/master/source-code/UNICODE_DisplayConsole.java).void ( ) -> QUANTIZE -> EXIT -> [source-code/UNICODE_DisplayConsole](https://github.com/JordanMicahBennett/SIMPLE-NEURAL-NETWORK/blob/master/source-code/UNICODE_DisplayConsole.java).void ( ) -> RECALL -> INSTRUCT -> DETECT. 
 
 
 
