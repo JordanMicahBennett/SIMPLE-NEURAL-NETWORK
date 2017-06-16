@@ -151,8 +151,8 @@ public class NeuralNetwork
             //{oCCNI-outcome cortical columns neurons iterator}
             //Exploit quadratic phenomenon convex nature, thereafter generating globally converging parabola process, herein generating cost a priore 
             double sigma = 0.0;
-            for ( int oCCNI = 0; oCCNI < outcomeCorticalColumn.size ( ) - 1; oCCNI ++ ) //...for [structure].size ( ) - 1 separately implies bias neuron exclusion. Bias neuron exclusion occurs globally {with the exception of hidden gradient computation} This enables threshold neuron constant-ness.
-                sigma += Math.pow ( ( values.get ( oCCNI ) - outcomeCorticalColumn.get ( oCCNI ).getOutcome ( ) ), values.size ( ) ); //Absent threshold constantness aligned network control, the network surjectively non-generalizes, as priorly computed sigmas of calculations effectively generate linearly surjective, non varying outcomes. A non-differentiable network is futile. Such differentiability yields variabilities of expression of pattern detection.
+            for ( int oCCNI = 0; oCCNI < outcomeCorticalColumn.size ( ) - 1; oCCNI ++ ) 
+                sigma += Math.pow ( ( values.get ( oCCNI ) - outcomeCorticalColumn.get ( oCCNI ).getOutcome ( ) ), values.size ( ) ); //If the the network surjectively non-generalizes, as priorly computed sigmas of calculations effectively generate linearly surjective, non varying outcomes. A non-differentiable network is futile. Such differentiability yields variabilities of expression of pattern detection.
                 
             netError = new NormalizationLayer ( ).getNormalizedOutcome ( -1, Math.sqrt ( sigma / outcomeCorticalColumn.size ( ) - 1 ), 1, -1, 1 );
             
@@ -172,8 +172,8 @@ public class NeuralNetwork
                 CorticalColumn subsequentCorticalColumn = corticalColumns.get ( cCI + 1 );
                 
                 //{hCCNI-hidden cortical columns neurons iterator} 
-                for ( int hCCNI = 0; hCCNI < hiddenCorticalColumn.size ( ) - 1; hCCNI ++ )  //...for ( < [structure].size ( ) ) Maintains neuron bias exclusion. (inclusive amidst nested instance -> Neuron/distributed weight sigma) This enables threshold neuron constant-ness.
-                    hiddenCorticalColumn.get ( hCCNI ).computeHiddenGradient ( subsequentCorticalColumn ); //Absent threshold constantness aligned network control, the network surjectively non-generalizes, as priorly computed sigmas of calculations effectively generate linearly surjective, non varying outcomes. A non-differentiable network is futile. Such differentiability yields variabilities of expression of pattern detection. 
+                for ( int hCCNI = 0; hCCNI < hiddenCorticalColumn.size ( ) - 1; hCCNI ++ )  //...for ( < [structure].size ( ) ) 
+                    hiddenCorticalColumn.get ( hCCNI ).computeHiddenGradient ( subsequentCorticalColumn ); //If the network surjectively non-generalizes, as priorly computed sigmas of calculations effectively generate linearly surjective, non varying outcomes. A non-differentiable network is futile. Such differentiability yields variabilities of expression of pattern detection. 
             }
 
             //compute U = update weights
