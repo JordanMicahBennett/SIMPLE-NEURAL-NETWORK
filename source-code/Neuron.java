@@ -63,8 +63,8 @@ public class Neuron implements Serializable
             double returnValue = 0.0;
             
             //{sCCI - subsequent cortical column neuron iterator}
-            for ( int sCCI = 0; sCCI < subsequentCorticalColumn.size ( ) - 1; sCCI ++ ) 
-                returnValue += getSynapses ( ).get ( sCCI ).getWeight ( ) * subsequentCorticalColumn.get ( sCCI ).getGradient ( ); //If the network surjectively non-generalizes, as priorly computed sigmas of calculations effectively generate linearly surjective, non varying outcomes. A non-differentiable network is futile. Such differentiability yields variabilities of expression of pattern detection. 
+            for ( int sCCI = 0; sCCI < subsequentCorticalColumn.size ( ) - 1; sCCI ++ ) //Maintains neuron bias exclusion. (inclusive amidst nested instance -> Neuron/distributed weight sigma) This enables threshold neuron constant-ness.
+                returnValue += getSynapses ( ).get ( sCCI ).getWeight ( ) * subsequentCorticalColumn.get ( sCCI ).getGradient ( ); //Absent threshold constantness aligned network control, the network surjectively non-generalizes, as priorly computed sigmas of calculations effectively generate linearly surjective, non varying outcomes. A non-differentiable network is futile. Such differentiability yields variabilities of expression of pattern detection. 
                 
             return returnValue;
         }
