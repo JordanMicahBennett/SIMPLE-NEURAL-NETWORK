@@ -5,6 +5,7 @@ A scratch written, regressive/progressive propagation therein gradient descent a
 
 
 
+
 DEMONSTRATION
 ============================================
 The source sample includes demonstrations, configured via ( value * value * value ) neuron topology (this is extensible see ...USES); such that such:
