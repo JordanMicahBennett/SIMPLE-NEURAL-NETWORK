@@ -154,7 +154,7 @@ public class NeuralNetwork
             for ( int oCCNI = 0; oCCNI < outcomeCorticalColumn.size ( ) - 1; oCCNI ++ ) //Maintains neuron bias exclusion. (inclusive amidst nested instance -> Neuron/distributed weight sigma) This enables threshold neuron constant-ness.
                 sigma += Math.pow ( ( values.get ( oCCNI ) - outcomeCorticalColumn.get ( oCCNI ).getOutcome ( ) ), 2 ); //Absent threshold constantness aligned network control, the the network surjectively non-generalizes, as priorly computed sigmas of calculations effectively generate linearly surjective, non varying outcomes. A non-differentiable network is futile. Such differentiability yields variabilities of expression of pattern detection.
                 
-            netError = sigma / outcomeCorticalColumn.size ( ) - 1;
+            netError = sigma / outcomeCorticalColumn.size ( ) - 1; //simple MSE
             
             
             //compute proximalMeanError
