@@ -131,6 +131,7 @@ public class UNICODE_GuiPanel extends JPanel
         consoleField.addLine ( "", "" );
         consoleField.addLine ( " . outcome : ", "{ { \u03B7 , \u03B1 } ( " + demonstrationLayer.NEURAL_NETWORK.eta + "," + demonstrationLayer.NEURAL_NETWORK.alpha + " ) }" );
         consoleField.addLine ( " . outcome : ", "" + demonstrationLayer.NEURAL_NETWORK.getOutcomes ( ) + " on [ " + initializationSelection + " ]" );
+        consoleField.addLine ( " . outcome : ", "e, " + demonstrationLayer.NEURAL_NETWORK.netError );
         
         add ( menuButtonDock );
     }

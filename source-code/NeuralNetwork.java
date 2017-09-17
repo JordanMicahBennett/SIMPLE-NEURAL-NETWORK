@@ -9,7 +9,7 @@ public class NeuralNetwork
     private CorticalColumns corticalColumns;
     private NeuralNetworkTopology neuralNetworkTopology;
     private String topologyDescription;
-    private double netError; //net error E
+    public double netError; //net error E
     private double proximalMeanError, proximallyProximalMeanError, proximalMeanSmoothingFactor; 
     private double gradientError; //gradient error
     private boolean consoleDisplayQuery; //determines whether System.out.println calls are executed
@@ -152,9 +152,10 @@ public class NeuralNetwork
             //Exploit quadratic phenomenon convex nature, thereafter generating globally converging parabola process, herein generating cost a priore 
             double sigma = 0.0;
             for ( int oCCNI = 0; oCCNI < outcomeCorticalColumn.size ( ) - 1; oCCNI ++ ) //Maintains neuron bias exclusion. (inclusive amidst nested instance -> Neuron/distributed weight sigma) This enables threshold neuron constant-ness.
-                sigma += Math.pow ( ( values.get ( oCCNI ) - outcomeCorticalColumn.get ( oCCNI ).getOutcome ( ) ), values.size ( ) ); //Absent threshold constantness aligned network control, the the network surjectively non-generalizes, as priorly computed sigmas of calculations effectively generate linearly surjective, non varying outcomes. A non-differentiable network is futile. Such differentiability yields variabilities of expression of pattern detection.
+                sigma += Math.pow ( ( values.get ( oCCNI ) - outcomeCorticalColumn.get ( oCCNI ).getOutcome ( ) ), 2 ); //Absent threshold constantness aligned network control, the the network surjectively non-generalizes, as priorly computed sigmas of calculations effectively generate linearly surjective, non varying outcomes. A non-differentiable network is futile. Such differentiability yields variabilities of expression of pattern detection.
                 
-            netError = new NormalizationLayer ( ).getNormalizedOutcome ( -1, Math.sqrt ( sigma / outcomeCorticalColumn.size ( ) - 1 ), 1, -1, 1 );
+            netError = sigma / outcomeCorticalColumn.size ( ) - 1;
+            
             
             //compute proximalMeanError
             proximallyProximalMeanError = proximalMeanError;
