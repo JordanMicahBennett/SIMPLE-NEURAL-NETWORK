@@ -46,7 +46,7 @@ See [INSTRUCTIONS.md](https://github.com/JordanMicahBennett/SYNTHETIC-SENTIENCE/
 
 
 
-MINIMUM-SECOND ARCHITECTURE OVERVIEW
+OVERVIEW
 ============================================
 https://www.youtube.com/watch?v=sBo9vXjue-E
 
