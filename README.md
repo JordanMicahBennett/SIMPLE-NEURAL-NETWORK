@@ -52,7 +52,9 @@ https://www.youtube.com/watch?v=sBo9vXjue-E
 
 
 
-
+IS DEEP LEARNING PAINFUL?
+=============================================
+https://www.quora.com/Is-it-painful-to-really-understand-Machine-Learning-or-Deep-Learning-without-knowing-a-lot-of-mathematics/answer/Jordan-Bennett-9
 
 
 
