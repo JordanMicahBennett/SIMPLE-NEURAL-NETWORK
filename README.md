@@ -46,9 +46,9 @@ See [INSTRUCTIONS.md](https://github.com/JordanMicahBennett/SYNTHETIC-SENTIENCE/
 
 
 
-OVERVIEW
+OVERVIEW BY ANOTHER AUTHOR
 ============================================
-https://www.youtube.com/watch?v=sBo9vXjue-E
+https://www.youtube.com/watch?v=KkwX7FkLfug
 
 
 
