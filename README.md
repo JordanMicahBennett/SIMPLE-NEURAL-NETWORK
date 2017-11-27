@@ -52,7 +52,7 @@ Two years ago, I saw a [nice artificial neural network tutorial on youtube by Da
 
 I didn't know any c++ back then, but java and c++ are somewhat similar looking.
 
-So back then I watched [the tutorial](https://www.youtube.com/watch?v=KkwX7FkLfug, then for a little while I began to think about an overall picture of what was going on.
+So back then I watched [the tutorial](https://www.youtube.com/watch?v=KkwX7FkLfug), then for a little while I began to think about an overall picture of what was going on.
 
 After 2 weeks or so of thinking, from scratch, I then transcribed what I learnt in the form of java code.
 
