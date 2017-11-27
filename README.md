@@ -46,14 +46,16 @@ See [INSTRUCTIONS.md](https://github.com/JordanMicahBennett/SYNTHETIC-SENTIENCE/
 
 
 
-THE TUTORIAL USED 2 YEARS AGO (WRITTEN IN C++)
+EDIT 2017: THE TUTORIAL USED 2 YEARS AGO (WRITTEN IN C++)
 ============================================
 https://www.youtube.com/watch?v=KkwX7FkLfug
 
 I didn't know any c++ back then, but java and c++ are somewhat similar looking.
 So back then I watched the tutorial, I thought about what an overall picture of what was going on.
 After 2 weeks or so of thinking, I then transcribed what I learnt in the form of java code.
-Surprisingly, the neural net worked well!!!
+Surprisingly, the neural net worked well, and so I uploaed to github 2 years ago....
+Admittedly, this is not the best way of learning how neural nets work. 
+I may have gotten the model to nicely work back then, but I can't say I have an intutive picture of what was goin on.
 
 
 
