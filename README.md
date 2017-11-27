@@ -52,12 +52,6 @@ https://www.quora.com/What-is-the-most-intuitive-explanation-of-artificial-neura
 
 
 
-IS [DEEP LEARNING](https://en.wikipedia.org/wiki/Deep_learning) PAINFUL?
-=============================================
-https://www.quora.com/Is-it-painful-to-really-understand-Machine-Learning-or-Deep-Learning-without-knowing-a-lot-of-mathematics/answer/Jordan-Bennett-9
-
-
-
 
 AUTHOR PORTFOLIO
 ============================================
