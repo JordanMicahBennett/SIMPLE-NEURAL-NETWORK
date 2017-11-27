@@ -52,9 +52,9 @@ I didn't know any c++ back then, but java and c++ are somewhat similar looking.
 
 So back then I watched [the tutorial](https://www.youtube.com/watch?v=KkwX7FkLfug), I thought about an overall picture of what was going on.
 
-After 2 weeks or so of thinking, I then transcribed what I learnt in the form of java code.
+After 2 weeks or so of thinking, from scratch, I then transcribed what I learnt in the form of java code.
 
-Surprisingly, the neural net worked well, and so I uploaded to github 2 years ago....
+Surprisingly, the neural net worked well, and so I uploaded to github 2 years ago, to this repositiory....
 
 Admittedly, this was not the best way of learning how neural nets actually work. 
 
