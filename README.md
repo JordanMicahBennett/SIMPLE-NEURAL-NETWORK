@@ -3,7 +3,9 @@ OUTLINE
 A scratch written, regressive/progressive propagation therein gradient descent aligned artificial neural network framework program of mine, that reasonably models human neuronal phenomena.
 
 
-
+OTHER NEURAL NETWORKS WRITTEN BY MYSELF
+============================================
+https://github.com/JordanMicahBennett/NEURAL_NETWORK_PRACTICE/
 
 
 
